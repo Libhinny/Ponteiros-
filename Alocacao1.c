@@ -22,7 +22,7 @@ int main (void){
     }
 
     for (contador = tamanho - 1; contador >= 0; contador--){
-    printf("%d", vetor[contador]);
+    printf("%d", &vetor[contador]);
     }
     free (vetor);
     return 0;
