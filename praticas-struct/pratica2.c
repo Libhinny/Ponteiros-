@@ -9,7 +9,7 @@ typedef struct pessoa {
 }Pessoa;
 
 int main (void){
-    struct pessoa var_pessoa;
+    Pessoa var_pessoa;
 
     printf("Informe o nome: ");
     scanf(" %[\^n]", var_pessoa.nome);
