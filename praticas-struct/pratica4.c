@@ -1,7 +1,7 @@
 //Programa que recebe dados de uma conta bancaria
 #include <stdlib.h>
 
-typedef struct Conta {
+typedef struct conta {
     char nome[20];
     int agencia;
     int numConta;
