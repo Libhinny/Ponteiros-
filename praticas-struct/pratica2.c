@@ -12,7 +12,7 @@ int main (void){
     Pessoa var_pessoa;
 
     printf("Informe o nome: ");
-    scanf(" %[\^n]", var_pessoa.nome);
+    scanf(" %[^\n]", var_pessoa.nome);
 
     printf("Digite a idade: ");
     scanf("%d", &var_pessoa.idade );
