@@ -14,7 +14,7 @@ void imprime(void);
 int main (void){
     
     Dados * dados = cadastro_funcionário;
-    prinft(imprime);
+    imprime();
     
     free(dados);
     return 0;
