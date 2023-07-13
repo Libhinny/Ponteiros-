@@ -40,5 +40,6 @@ Dados * cadastro_funcionário (void) {
 }
 
 void imprime(void){
-     printf("Dados: \n Nome: %s \n Salário: %2.f \n Identificador: %d Cargo: %s \n", dados->nome, dados->salario, dados->identificador, dados->cargo);
+    printf("Dados: \n Nome: %s \n Salário: %2.f \n Identificador: %d Cargo: %s \n", dados->nome, dados->salario, dados->identificador, dados->cargo);
+    return;
 }
