@@ -9,7 +9,7 @@ typedef struct dados{   // Struct e Ponteiros
 }Dados;
 
 Dados * cadastro_funcionário (void); 
-void imprime(void);
+void imprime();
 
 int main (void){
     
