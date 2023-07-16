@@ -10,11 +10,17 @@ typedef struct dados{   // Struct e Ponteiros
 
 Dados * cadastro_funcionário (void); 
 void imprime(Dados * dados);
+void atualizar_salario (Dados * dados, float novo_salario);
 
 int main (void){
     
     Dados * dados = cadastro_funcionário;
     imprime(dados);
+
+    float novo_salario;
+    printf("Atualize o valor do salário: \n");
+    scanf("%f", &novo_salario); 
+    atualizar_salario(dados, novo_salario);
     
     free(dados);
     return 0;
@@ -42,4 +48,9 @@ Dados * cadastro_funcionário (void) {
 void imprime(Dados * dados){
     printf("Dados: \n Nome: %s \n Salário: %.2f \n Identificador: %d Cargo: %s \n", dados->nome, dados->salario, dados->identificador, dados->cargo);
     return;
+}
+
+void atualizar_salario (Dados * dados, float novo_salario){
+    dados->salario = novo_salario;
+    printf("Atualização do salário realizada!\n");
 }
