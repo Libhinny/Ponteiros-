@@ -2,7 +2,7 @@
 #include <stdlib.h>
  
 
-typedef struct aluno{
+typedef struct aluno{ /* declaração da função struct em que obtém as variáveis nome, endereço e telefone de determinado aluno */
     int mat;
     char nome[81];
     char end[121];
@@ -10,7 +10,7 @@ typedef struct aluno{
 }Aluno;
 
 
-void inicializa (int n, Aluno** tab){
+void inicializa (int n, Aluno** tab){ /*  */
     int i;
     for (i=0; i < n; i++){
         tab[i] = NULL;
@@ -20,13 +20,13 @@ void inicializa (int n, Aluno** tab){
 void preenche (int n, Aluno** tab, int i){
     if (i < 0 || i >= n){
         printf ("Indice fora do limite do vetor.\n");
-        exit(1);
+        exit(1); //aborta o programa
     }
     if (tab[i] == NULL){
-        tab[i] = (Aluno*)malloc(sizeof(Aluno));
+        tab[i] = (Aluno*)malloc(sizeof(Aluno)); // realização da alocação
     }
 
-    printf("Entre com a matricula: \n");
+    printf("Entre com a matricula: \n"); /* nessa parte o programa pegará as informações, de acordo com a quantidade de vezes em que o laço se repetirá */ 
     scanf("%d", &tab[i]->mat);
     printf("Entre com o nome: \n");
     scanf(" %80[^\n]", tab[i]->nome);
@@ -52,7 +52,7 @@ void imprime (int n, Aluno** tab, int i){
         printf("Indice fora do limite do vetor.\n");
         exit(1);
     }
-    if (tab[i] != NULL){
+    if (tab[i] != NULL){ 
         printf("Matricula: %d\n", tab[i]->mat);
         printf("Nome: $s\n", tab[i]->nome);
         printf("Endereço: %s\n", tab[i]->end);
