@@ -10,7 +10,7 @@ typedef union tipo{
 typedef struct produto{
     char nome[20];
     float preco;
-    Tipo tipo;
+    Tipo tip;
 }Produto;
 
 int main (void){
@@ -43,6 +43,8 @@ int main (void){
        break;
 
    }
+
+   printf ("Dados do produto: \n Nome: %s \n Preco: %f \n Classe do produto: %s \n", prod.nome, prod.preco, prod.tip); // corrigir a impressão dos dados
 
     return 0;
 }
