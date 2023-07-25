@@ -27,17 +27,17 @@ int main (void){
    switch (op)
    {
        case 0:
-       scanf(" %[^\n]", prod.tipo.alimento);
+       scanf(" %[^\n]", prod.tip.alimento);
        printf("É um alimento \n");
        break;
 
        case 1:
-       scanf(" %[^\n]", prod.tipo.bebida);
+       scanf(" %[^\n]", prod.tip.bebida);
        printf("O produto é uma bebida \n");
        break;
 
        case 2:
-       scanf(" %[^\n]", prod.tipo.eletronico);
+       scanf(" %[^\n]", prod.tip.eletronico);
        printf("O produto é um eletronico \n");
     default:
        break;
