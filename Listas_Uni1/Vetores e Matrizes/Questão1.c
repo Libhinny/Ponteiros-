@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 int main (void){
-    int tamanho;
-    printf ("Digite o tamanho do vetor\n");
-    scanf ("%d", &tamanho);
+    int tamanho; // indica o tamanho do vetor 
+    printf ("Digite o tamanho do vetor\n"); // pede que o user informe o tamanho desejado
+    scanf ("%d", &tamanho); // e armazene o valor na variável 'tamanho'
 
-    int * vetor = (int*) malloc(tamanho*sizeof(int));
+    int * vetor = (int*) malloc(tamanho*sizeof(int)); // faz a alocação de memória
     if (vetor == NULL) {
-    printf ("Erro de alocação \n");
+    printf ("Erro de alocação \n"); // se houver erros na alocação, a ação é abortada
     exit (1);
     }
     else {
@@ -16,14 +16,14 @@ int main (void){
     }
     // Recebe elementos inseridos pelo user
     int contador;
-    printf ("Digite os valores do vetor: \n");
-    for (contador=0 ; contador<tamanho; contador++);{
+    printf ("Digite os valores do vetor: \n"); // pede que o user insira os valores para preencher o vetor
+    for (contador=0 ; contador<tamanho; contador++){
         scanf ("%d", &vetor[contador]);
     }
 
-    for (contador = tamanho - 1; contador >= 0; contador--){
-    printf("%d", &vetor[contador]);
+    for (contador = tamanho - 1; contador >= 0; contador--){ // imprime os valores na ordem inversa
+    printf("%d", vetor[contador]);
     }
-    free (vetor);
+    free (vetor); // faz a liberação da memória 
     return 0;
 }
