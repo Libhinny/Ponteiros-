@@ -18,11 +18,11 @@ int main (void){
     // Recebe elementos inseridos pelo user
     int contador;
     printf ("Digite os valores do vetor: \n");
-    for (contador=0 ; contador<tamanho; contador++){
-        scanf ("%d", vetor[contador]);
+    for (contador=0 ; contador<tamanho; contador++){ // o user vai fornecer valores de acordo com o valor fornecido a variavel 'tamanho'
+        scanf ("%d", vetor[contador]); // os valores serão armazenados nas posições do vetor 
     }
 
-    for (contador = tamanho - 1; contador >= 0; contador--){
+    for (contador = tamanho - 1; contador >= 0; contador--){ // aqui, os valores serão colocados na ordem inversa
     printf("%d", &vetor[contador]);
     }
     free (vetor); // liberação da memória
