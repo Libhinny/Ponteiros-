@@ -3,6 +3,6 @@
 int main (void){
  float var = 2.5;
 float *ponteiro = &var;
-printf ("var = %f \n pontteiro = %p", var, ponteiro);
+printf ("var = %f \n ponteiro = %p", var, ponteiro);
 return 0;
 }
