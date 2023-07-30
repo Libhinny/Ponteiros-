@@ -1,0 +1,43 @@
+/* 1 - Ponteiros
+
+  01. Suponha que v é um vetor. Descreva a diferença conceitual entre as expressões v[2] e v+2.
+      A expressão v[2] indica que está sendo acessado um elemento específico do vetor e a expressão v+2 mostra que o valor 
+      2 está sendo somado a cada elemento do vetor.
+
+  02. Suponha que os elementos do vetor v são do tipo int e cada int ocupa 4 bytes no seu computador. Se o endereço de v[0] é 55000, qual o valor da expressão v+3. 
+      Considerando que v[0] é 55000, temos que v+3 = 55000 + (3*4), logo, v+3 = 55012.
+      
+2 - Alocação Dinâmica
+
+  01. Escreva uma função que receba dois vetores como entrada e retorne um novo vetor que contenha a soma dos elementos correspondentes dos vetores de entrada.
+
+      int * soma_vet (int *vet1, int *vet2, int tamanho){
+        int * resultado = (int *)malloc(tamanho*sizeof(int));
+          if (resultado == NULL){
+            prinft("Sem memória!\n");
+            exit(1);
+          }
+          for (int i = 0; i < tamanho; i++){
+            resultado[i] = vet1[i] + vet2[i];
+          }
+          return resultado;
+      }
+
+  02. Escreva uma função que receba duas strings como entrada e retorne uma nova string que seja a concatenação das duas. 
+      
+      char * concat_strings (char *str1, char *str2){
+          int tmh_str1 = strlen(str1);
+          int tmh_str2 = strlen(str2);
+
+          char * nova_str = (char *)malloc((tmh_str1 + tmh_str2 + 1) * sizeof(char)); // alocação para a nova string que vai armazenar a concatenação
+          if (nova_str == NULL){
+              printf("Sem memória\n");
+              exit(1);
+          }
+
+          // concatena as strings à nova
+          strcopy(nova_str, str1);
+          strcopy(nova_str, str2);
+
+          return nova_str;
+*/
