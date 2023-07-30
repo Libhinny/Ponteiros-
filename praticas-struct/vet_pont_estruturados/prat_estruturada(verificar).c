@@ -17,7 +17,7 @@ typedef struct turma{
     Aluno * alunos[MAX_TURMAS];
 }Turma;
 
-Turma* turmas[MAX_VAGAS];
+Turma * turmas[MAX_VAGAS];
 
 int main (void){
     printf("Bem-vindo ao Programa de Gerenciamento de Turmas!\n Este programa gerencia as turmas ofertadas, fornecendo as funcionalidades de matricula, lancamento de notas e listagem de alunos \n");
