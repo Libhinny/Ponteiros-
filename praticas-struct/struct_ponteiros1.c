@@ -2,14 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct aluno {
+typedef struct aluno { // struct com os campos de nome e idade
     char nome[20];
     int idade;
-} Aluno;
+} Aluno; // renomea com o comando typedef 
 
 int main (void){
-    Aluno * aluno = (Aluno *) malloc(sizeof(Aluno));
+    Aluno * aluno = (Aluno *) malloc(sizeof(Aluno)); // alocação dinamica 
 
+    // pega as informações do aluno e armazena 
     printf("Digite o nome: ");
     scanf(" %[^\n]", aluno->nome );
 
