@@ -10,12 +10,12 @@ typedef struct funcionario{
     int idade;
     float salario;
     char cargo[20];
-}Funcionario;
+}Funcionario; // renomea usando o comando typedef
 
 void cadastraFuncionario (Funcionario * vetor_funcionario, int qnt_funcionarios){
 /* Função que cadastra funcionário */
     int indice;
-    for (indice=0; indice< qnt_funcionarios; indice++){
+    for (indice=0; indice< qnt_funcionarios; indice++){ // percorre o laço pegando as info de acordo com o tamanho indicado pelo user de quantos funcionários serão cadastrados
         printf("Digite o nome: \n");
         scanf(" %[^\n]", vetor_funcionario[indice].nome);
         printf("Digite a idade: \n");
@@ -29,17 +29,17 @@ void cadastraFuncionario (Funcionario * vetor_funcionario, int qnt_funcionarios)
 
 int main (void){
     
-    int quantidade_funcionarios;
+    int quantidade_funcionarios; // declaração da variavel que armazenará a qtd de funcionários
     printf("Informe a quantidade de funcionários a ser cadastrado: \n");
     scanf("%d", &quantidade_funcionarios);
 
-    Funcionario * vetor = (Funcionario *)malloc(quantidade_funcionarios*sizeof(Funcionario));
-    if (vetor == NULL){
-        prinft("Sem memória!\n");
+    Funcionario * vetor = (Funcionario *)malloc(quantidade_funcionarios*sizeof(Funcionario)); // alocação dinamica 
+    if (vetor == NULL){ // verificação se houve erros com a alocação
+        printf("Sem memória!\n");
         exit(1);
     }
 
-    cadastraFuncionario(vetor, quantidade_funcionarios);
+    cadastraFuncionario(vetor, quantidade_funcionarios); // chama a função 
 
     return 0;
 }
