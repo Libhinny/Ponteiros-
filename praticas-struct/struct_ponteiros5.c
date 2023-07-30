@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct disciplina{   // Struct e Ponteiros
+// struct e ponteiros 
+/* segue o modelo do arq struct_ponteiros4.c, no entanto, neste é definido a quantidade de 
+   de disciplinas a serem cadastradas. */
+
+typedef struct disciplina{  
     char nome[30];
     float nota;
 }Disciplina;
@@ -13,18 +17,20 @@ typedef struct aluno {
 } Aluno;
 
 int main (void){
-    Aluno * aluno = (Aluno *) malloc(sizeof(Aluno));
-    if (aluno == NULL){
+    Aluno * aluno = (Aluno *) malloc(sizeof(Aluno)); // faz a alocação dinamica 
+    if (aluno == NULL){ // verifica se ocorreu corretamente
         printf("Sem memória!\n");
         exit(1);
     }
 
-    aluno->disciplina = (Disciplina*) malloc (2*sizeof(Disciplina)); //o sizeof não é multiplicado porque consideramos como se houvesse apenas 1 disciplina
-    if (aluno->disciplina == NULL){
+    aluno->disciplina = (Disciplina*) malloc (2*sizeof(Disciplina)); // alocação dinamica da variavel disciplina
+    if (aluno->disciplina == NULL){ // verifica se a alocação ocorreu corretamente
         printf("Sem memória!\n");
         exit(1);
     }
 
+
+    // pega os dados fornecidos pelo aluno e sobre a disciplina, armazenando-os em suas respectivas variaveis
     printf("Digite o nome: \n");
     scanf(" %[^\n]", aluno->nome );
 
@@ -41,9 +47,11 @@ int main (void){
     printf("Digite a nota da 2 disciplina: \n");
     scanf("%f", &aluno->disciplina[1].nota);
 
+
+    // imprime os dados na tela 
     printf("Dados: \n Nome: %s \n Idade: %d \n Disciplina 1: %s Disciplina 2: %s \n Nota 1: %2.f \n Nota 2: %2.f", aluno->nome, aluno->idade, aluno->disciplina[0].nome, aluno->disciplina[1].nome, aluno->disciplina[0].nota, aluno->disciplina[1].nota);
 
-    free(aluno->disciplina);
+    free(aluno->disciplina); // faz a liberação da memória com o comando free
     free(aluno);
     return 0;
 }
