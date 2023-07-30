@@ -27,8 +27,11 @@ int main (void){
     scanf("%f", &var_pessoa[indice].altura );
     }
 
-    // imprime os dados informados 
-    printf("Os dados informados:\n Nome: %s \t Idade: %d \t RG: %d \t Altura: %2.f ", var_pessoa.nome, var_pessoa.idade, var_pessoa.rg, var_pessoa.altura);
+    // imprime os dados informados percorrendo o laço
+    printf("Os dados informados:\n);
+        for (indice = 0; indice < 3; indice++) {
+            printf("Nome: %s \t Idade: %d \t RG: %d \t Altura: %f\n", var_pessoa[indice].nome, var_pessoa[indice].idade, var_pessoa[rg], var_pessoa[indice].altura);
+}
 
     return 0; 
 }
