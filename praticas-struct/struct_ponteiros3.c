@@ -3,6 +3,10 @@
 
 // Struct e Ponteiros
 
+/* continuação do arq struct_ponteiros2.c, onde dá continuidade ao pegar os dados do nome e
+   nota referentes à disciplina, e os armazena. Após isso, imprime os dados do aluno e mostra
+   a disciplina e sua respectiva nota. Por fim, libera a memória com o comando free. */
+
 typedef struct disciplina{   
     char nome[30];
     float nota;
