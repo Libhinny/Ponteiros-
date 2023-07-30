@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct disciplina{   // Struct e Ponteiros
+// Struct e Ponteiros
+
+typedef struct disciplina{   
     char nome[30];
     float nota;
 }Disciplina;
