@@ -16,24 +16,26 @@ Aluno * cadastra_aluno(void);
 
 int main (void){
 
-    Aluno * aluno = cadastra_aluno ();
+    Aluno * aluno = cadastra_aluno (); // chama a função que faz o cadastro
 
     printf("Dados: \n Nome: %s \n Idade: %d \n Disciplina 1: %s Disciplina 2: %s \n Nota 1: %2.f \n Nota 2: %2.f", aluno->nome, aluno->idade, aluno->disciplina[0].nome, aluno->disciplina[1].nome, aluno->disciplina[0].nota, aluno->disciplina[1].nota);
 
-    free(aluno->disciplina);
+    free(aluno->disciplina); // libera a memória com o comando free
     free(aluno);
     return 0;
 }
 
+// função que realiza o cadastro do aluno
 Aluno * cadastra_aluno (void){
-     Aluno * aluno = (Aluno *) malloc(sizeof(Aluno));
-    if (aluno == NULL){
+     Aluno * aluno = (Aluno *) malloc(sizeof(Aluno)); // faz a alocação dinamica de memoria 
+    if (aluno == NULL){ // verifica se a alocação ocorreu corretamente
         printf("Sem memória!\n");
         exit(1);
     }
     
-    aluno->disciplina = (Disciplina*) malloc (2*sizeof(Disciplina));
-    
+    aluno->disciplina = (Disciplina*) malloc (2*sizeof(Disciplina)); // alocação dinamica de memória, e o 2 indica a quantidade de disciplinas
+
+    // pega os dados fornecidos pelo usuário e os armazena
     printf("Digite o nome: \n");
     scanf(" %[^\n]", aluno->nome );
 
