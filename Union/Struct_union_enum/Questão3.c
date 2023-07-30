@@ -36,7 +36,7 @@ int main (void){
     scanf("%d", &data.ano);
 
     // imprime da data no formato "dd/mm/aaaa"
-    printf("Data: %02d/%02d/%04d\n", data.dia, data.mes, data.ano);
+    printf("Data: %02d/%02d/%04d\n", data.dia, data.mes, data.ano); // usando essa formatação, a data fica com o formato ideal quando impresso na tela
 
     return 0;
 }
